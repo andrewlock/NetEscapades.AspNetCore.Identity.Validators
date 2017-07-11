@@ -23,12 +23,12 @@ You can add the validators to your project using the `AddPasswordValidator<TVali
 services.AddIdentity<ApplicationUser, IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>()
     .AddDefaultTokenProviders()
-    .AddEmailAsPasswordValidator() // Add the email as password validator
-    .AddUsernameAsPasswordValidator() // Add the username as password validator
+    .AddEmailAsPasswordValidator<ApplicationUser>() // Add the email as password validator
+    .AddUsernameAsPasswordValidator<ApplicationUser>() // Add the username as password validator
     .AddInvalidPhraseValidator<ApplicationUser>(new []{"MyDomainName.com"}); // Add the invalid phrase validator
 ```
 
->*NOTE* This package is currently for ASP.NET Core Identity 2.0-preview-2, so requires .NET Core 2.0-preview2 is installed.
+>*NOTE* This package is currently for ASP.NET Core Identity 2.0-preview-2, so requires .NET Core 2.0-preview2 be installed.
 
 ## Installing 
 
@@ -45,4 +45,6 @@ dotnet add package NetEscapades.AspNetCore.Identity.Validators
 ```
 
 ## Additional Resources
+* [Creating custom password Validators for ASP.NET Core Identity](https://andrewlock.net/creating-custom-password-validators-for-asp-net-core-identity/)
 * [Introduction to ASP.NET Core Identity](https://docs.microsoft.com/en-us/aspnet/core/security/authentication/identity)
+
