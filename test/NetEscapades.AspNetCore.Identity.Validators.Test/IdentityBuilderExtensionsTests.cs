@@ -18,12 +18,12 @@ namespace NetEscapades.AspNetCore.Identity.Validators.Test
             // Assert
             await Assert.ThrowsAsync<ArgumentNullException>(() =>
             {
-                IdentityBuilderExtensions.AddEmailAsPasswordValidator<IdentityUser>(null);
+                ((IdentityBuilder) null).AddEmailAsPasswordValidator<IdentityUser>();
                 return Task.CompletedTask;
             });
             await Assert.ThrowsAsync<ArgumentNullException>(() =>
             {
-                IdentityBuilderExtensions.AddUsernameAsPasswordValidator<IdentityUser>(null);
+                ((IdentityBuilder)null).AddUsernameAsPasswordValidator<IdentityUser>();
                 return Task.CompletedTask;
             });
         }

@@ -1,3 +1,5 @@
+using Microsoft.AspNetCore.Identity;
+
 namespace Microsoft.AspNetCore.Builder
 {
     public static class IdentityOptionsExtensions
