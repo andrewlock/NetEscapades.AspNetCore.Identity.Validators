@@ -13,7 +13,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\NetEscapades.AspNetCore.Identity.Validators\NetEscapades.AspNetCore.Identity.Validators.csproj" />
-    <ProjectReference Include="..\..\src\NetEscapades.AspNetCore.Identity.Validators\NetEscapades.AspNetCore.Identity.Validators.csproj" />
   </ItemGroup>
 
   <ItemGroup>
