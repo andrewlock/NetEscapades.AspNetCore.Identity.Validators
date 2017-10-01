@@ -39,6 +39,7 @@ namespace NetEscapades.AspNetCore.Identity.Validators.Sample
                 .AddDefaultTokenProviders()
                 .AddEmailAsPasswordValidator<ApplicationUser>()
                 .AddUsernameAsPasswordValidator<ApplicationUser>()
+                .AddPasswordValidator<PreventPasswordChangeValidator<ApplicationUser>>()
                 .AddInvalidPhraseValidator<ApplicationUser>(new []{"MyDomainName.com"});
 
             // Add application services.
