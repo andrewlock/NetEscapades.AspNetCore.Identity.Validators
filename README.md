@@ -28,7 +28,7 @@ services.AddIdentity<ApplicationUser, IdentityRole>()
     .AddInvalidPhraseValidator<ApplicationUser>(new []{"MyDomainName.com"}); // Add the invalid phrase validator
 ```
 
->*NOTE* This package is currently for ASP.NET Core Identity 2.0-preview-2, so requires .NET Core 2.0-preview2 be installed.
+>*NOTE* This package currently support ASP.NET Core Identity 2.0 (.NET Standard 2.0) and .NET Core 3.0
 
 ## Installing 
 
